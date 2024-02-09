@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Factorial</title> 
+    <script src="script.js"></script>
+
+    
+</head>
+<body>
+    
+    
+    <script>
+       function calcularFactorial() {
+
+    let input = prompt("Ingrese un número para calcular su factorial:");
+
+    while (isNaN(input) || input === null || input === "") {
+
+        alert("Por favor, ingrese un número válido.");
+
+        input = prompt("Ingrese un número para calcular su factorial:");
+    }
+
+    const numero = parseInt(input);
+
+    const factorial = calcularFactorialRecursivo(numero);
+
+    mostrarResultado(factorial);
+}
+
+
+function mostrarResultado(resultado) {
+
+    const resultadoDiv = document.createElement("div");
+
+    resultadoDiv.textContent = `El factorial es: ${resultado}`;
+
+    document.body.appendChild(resultadoDiv);
+}
+
+
+calcularFactorial();
+
+
+   </script>
+   
+    
+
+</body>
+</html>
